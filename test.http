@@ -1,0 +1,11 @@
+POST http://localhost:3002/api/store-post-data
+Content-Type: application/json
+
+{
+  "imageUrls": [],
+  "text": "User prompt: do u receive the image link?\nComments:\nAlice: I'm not sure man!\nBob: Is it cactus?\nDescription:\nGuys, can you help me identify what plants these are and what diseases they might be suffering from?\nONLY answer the user's prompt above. Do NOT provide general plant advice unless it is directly relevant to the user's question. Be concise and specific.",
+  "metaData": {
+    "location": "Greenhouse 5",
+    "submittedBy": "user42"
+  }
+}
