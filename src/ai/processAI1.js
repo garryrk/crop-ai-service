@@ -60,7 +60,7 @@ async function processAI(dataId, postData = null) {
 
     // Send response to main service and include metaData
     try {
-      await axios.post(`${MAIN_SERVICE_URL}/api/ai-response`, {
+      await axios.post(`${MAIN_SERVICE_URL}/api/v1/service/ai`, {
         aiResponse: aiInsight,
         metaData: postData.metaData || {}
       });
