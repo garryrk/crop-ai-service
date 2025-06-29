@@ -8,8 +8,8 @@ services:
     volumes:
       - redis-data:/data
 
-  crop-ai-service:
-    image: garryrk/crop-ai-service:latest
+  a-service1:
+    image: garryrk/a-service1:tag
     ports:
       - "3002:3002"
     env_file:
