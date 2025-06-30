@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors'); // <-- add this
+const cors = require('cors'); 
 const logger = require('./middleware/logger');
 const responseRoutes = require('./routes/responseRoutes');
 const postDataRoutes = require('./routes/postDataRoutes');
