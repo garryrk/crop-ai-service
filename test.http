@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "imageUrls": [],
-  "text": "User prompt: hey do u sreceive the image yes link?\nComments:\nAlice: I'm not sure man!\nBob: Is it cactus?\nDescription:\nGuys, can you help me identify what plants these are and what diseases they might be suffering from?\nONLY answer the user's prompt above. Do NOT provide general plant advice unless it is directly relevant to the user's question. Be concise and specific.",
+  "text": "User prompt:",
   "metaData": {
     "location": "Greenhouse 5",
     "submittedBy": "user42"
