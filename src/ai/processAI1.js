@@ -16,10 +16,9 @@ async function processAI(dataId, postData = null) {
       return;
     }
 
-    // Use the text field directly as the prompt
     const prompt = postData.text || "";
 
-    // Convert images to base64 (supports multiple images)
+    // Convert images to base64
     let imageParts = [];
     if (Array.isArray(postData.imageUrls)) {
       for (const url of postData.imageUrls) {
@@ -45,7 +44,7 @@ async function processAI(dataId, postData = null) {
 
     const parts = [{ text: prompt }, ...imageParts];
 
-    // Call Gemini model
+    // Call AI model
     let aiInsight = "Unable to generate AI response.";
     try {
       const result = await model.generateContent({ contents: [{ parts }] });
@@ -56,15 +55,15 @@ async function processAI(dataId, postData = null) {
 
     // Save response
     await saveAIResponse(dataId, aiInsight);
-    console.log(`✅ AI processed and saved response for ${dataId}`);
+    console.log(` AI processed and saved response for ${dataId}`);
 
-    // Send response to main service and include metaData
+    // Sending response to main service 
     try {
       await axios.post(`${MAIN_SERVICE_URL}/api/v1/service/ai`, {
         aiResponse: aiInsight,
         metaData: postData.metaData || {}
       });
-      console.log(`✅ AI response sent to main service for ${dataId}`);
+      console.log(` AI response sent to main service for ${dataId}`);
       await redis.del(`data:${dataId}`);
     } catch (err) {
       console.error(` Failed to send AI response to main service for ${dataId}:`, err.message);
