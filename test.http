@@ -5,7 +5,7 @@ Content-Type: application/json
   "imageUrls": [],
   "text": "User prompt:",
   "metaData": {
-    "location": "Greenhouse 5",
+    "location": "Ok 5",
     "submittedBy": "user42"
   }
 }
