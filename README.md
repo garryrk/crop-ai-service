@@ -31,7 +31,7 @@ PORT=3002
 # Main service webhook endpoint (replace with your actual URL)
 MAIN_SERVICE_URL=https://your-main-service-url.com
 
-# Gemini API key (replace with your actual key, never commit real keys)
+# Gemini API key (replace with your actual key)
 GEMINI_API_KEY=your-gemini-api-key
 ```
 
